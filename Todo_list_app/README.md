@@ -18,9 +18,13 @@ mvn spring-boot:run
 ## Endpoints
 
 POST: /tasks - create task
+
 GET: /tasks - get all tasks
+
 GET: /tasks/{id} - get task by id
+
 DELETE: /tasks/{id} - delete task by id
+
 PUT: /tasks/{id} - update task by id
 
 
