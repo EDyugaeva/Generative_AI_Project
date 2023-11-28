@@ -1,7 +1,6 @@
 package com.epam.esm.controllers;
 
 import com.epam.esm.model.Book;
-import com.epam.esm.model.Genre;
 import com.epam.esm.services.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -60,8 +59,7 @@ public class BookController extends BaseController {
             @Parameter(description = "ID of the book to be obtained") @PathVariable Long id) {
         log.info("Attempting to retrieve book with ID: {}", id);
         Book book = bookService.getBookById(id);
-        return (book != null) ? new ResponseEntity<>(book, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(book, HttpStatus.OK);
     }
 
     @GetMapping

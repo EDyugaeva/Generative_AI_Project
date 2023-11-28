@@ -62,8 +62,7 @@ public class AuthorController extends BaseController{
             @Parameter(description = "ID of the author to be obtained") @PathVariable Long id) {
         log.info("Attempting to retrieve author with ID: {}", id);
         Author author = authorService.getAuthorById(id);
-        return (author != null) ? new ResponseEntity<>(author, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(author, HttpStatus.OK);
     }
 
     @GetMapping
