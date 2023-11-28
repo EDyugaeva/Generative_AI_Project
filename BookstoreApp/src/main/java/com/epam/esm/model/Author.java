@@ -1,6 +1,8 @@
 package com.epam.esm.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -8,6 +10,8 @@ import javax.validation.constraints.NotBlank;
 @Entity
 @Data
 @Table(name = "authors")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

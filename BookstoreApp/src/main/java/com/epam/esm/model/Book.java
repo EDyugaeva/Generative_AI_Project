@@ -1,9 +1,12 @@
 package com.epam.esm.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 
@@ -11,12 +14,15 @@ import lombok.ToString;
 @Table(name = "books")
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "title", nullable = false)
+    @NotBlank(message = "Title cannot be blank")
     private String title;
 
     @ManyToOne

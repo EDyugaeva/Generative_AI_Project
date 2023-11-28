@@ -103,7 +103,7 @@ public class BookController extends BaseController {
     @GetMapping("/searchByGenre")
     @Operation(summary = "Search books by genre", description = "Search books by genre in the system")
     public ResponseEntity<List<Book>> searchByGenre(
-            @Parameter(description = "Genre of the book") @RequestParam Genre genre) {
+            @Parameter(description = "Genre of the book") @RequestParam String genre) {
         log.info("Searching books by genre: {}", genre);
         List<Book> books = bookService.searchByGenre(genre);
         return new ResponseEntity<>(books, HttpStatus.OK);

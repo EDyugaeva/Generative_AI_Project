@@ -18,5 +18,5 @@ public interface BookService {
 
     List<Book> searchByAuthor(String authorFirstName, String authorLastName);
 
-    List<Book> searchByGenre(Genre genre);
+    List<Book> searchByGenre(String genre);
 }
