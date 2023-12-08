@@ -2,11 +2,15 @@ package com.epam.esm.exception;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
+import java.sql.SQLException;
+
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
@@ -29,5 +33,12 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleValidationException(ValidationException e) {
         log.error("Data not found exception: {}", e.getMessage());
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(DataAccessException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<String> handleDataAccessException(DataAccessException e) {
+        log.error("Data not found exception: {}", e.getMessage());
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

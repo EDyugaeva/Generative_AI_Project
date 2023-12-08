@@ -52,6 +52,7 @@ public class AuthorController extends BaseController{
         Author existingAuthor = authorService.getAuthorById(id);
         existingAuthor.setFirstName(updatedAuthor.getFirstName());
         existingAuthor.setLastName(updatedAuthor.getLastName());
+        existingAuthor.setCountryOfResidence(updatedAuthor.getCountryOfResidence());
 
         Author savedAuthor = authorService.updateAuthor(existingAuthor);
         return new ResponseEntity<>(savedAuthor, HttpStatus.OK);
