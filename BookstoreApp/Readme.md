@@ -98,11 +98,13 @@ Delete a genre by its ID.
 Path Variable: ID of the genre to be deleted.
 Response: No content with status 204 if successful, 404 if the genre with the given ID is not found.
 
+
 ## Code quality
 
 | Parameter | result |
 |:---------:| :---: |
 |test coverage (service and controller classes) | 100% |
+
 
 ### questions from the task
 
@@ -112,22 +114,6 @@ Response: No content with status 204 if successful, 404 if the genre with the gi
 - What did you have to change to make it usable? _**correct some small mistakes, configuration**_
 - Which challenges did you face during completion of the task? _**spring configuration(different version compatibility)**_
 - Which specific prompts you learned as a good practice to complete the task? _**any specific, I tried different**_
-
-
-chatGPT logs:### Code quality
-
-| Parameter | result |
-|:---------:| :---: |
-|test coverage (service and controller classes) | 100% |
-
-### questions from the task
-
-- Was it easy to complete the task using AI? _yes_
-- How long did task take you to complete? (Please be honest, we need it to gather anonymized statistics) _3 hours_
-- Was the code ready to run after generation? _mostly_
-- What did you have to change to make it usable? _correct some small mistakes, reorganise some constants_
-- Which challenges did you face during completion of the task? _run db with docker (I don't have mySql workbench installed) and testing didn't worked from start_
-- Which specific prompts you learned as a good practice to complete the task? _any specific, I tried different_
 
 
 chatGPT logs:
