@@ -117,4 +117,4 @@ Response: No content with status 204 if successful, 404 if the genre with the gi
 
 
 chatGPT logs:
-https://chat.openai.com/share/531beeb6-a6bd-4dc9-b46d-d9cdc260f1e9
+https://chat.openai.com/share/af7e436c-b8b1-4bfc-b4c2-b91038b07516
